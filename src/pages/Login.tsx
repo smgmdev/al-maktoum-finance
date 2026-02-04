@@ -62,7 +62,7 @@ const Login = () => {
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[hsl(210,50%,12%)] via-[hsl(215,45%,10%)] to-[hsl(220,40%,8%)] text-foreground overflow-y-auto">
+    <div className="min-h-screen bg-black text-foreground overflow-y-auto">
       {/* Header */}
       <header 
         className={`fixed top-0 left-0 right-0 z-50 px-6 py-3 bg-black/90 backdrop-blur-md border-b border-white/10 transition-transform duration-300 ${
