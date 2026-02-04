@@ -69,8 +69,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        serif: ["SF Pro Display", "system-ui", "sans-serif"],
-        sans: ["SF Pro Text", "system-ui", "sans-serif"],
+        sans: ["Inter", "SF Pro Display", "system-ui", "sans-serif"],
       },
       letterSpacing: {
         tightest: "-0.05em",
