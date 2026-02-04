@@ -130,8 +130,15 @@ const FeatureSlider = () => {
     if (!emblaApi) return;
     onSelect();
     emblaApi.on("select", onSelect);
+
+    // Auto-scroll every 4 seconds
+    const autoplay = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 4000);
+
     return () => {
       emblaApi.off("select", onSelect);
+      clearInterval(autoplay);
     };
   }, [emblaApi, onSelect]);
 
