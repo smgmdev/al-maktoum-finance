@@ -1,6 +1,39 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
+import { z } from "zod";
+
+const emailSchema = z.string().trim().email({ message: "Please enter a valid email address" });
 
 const LoginHero = () => {
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const result = emailSchema.safeParse(email);
+    if (!result.success) {
+      toast({
+        title: "Invalid Email",
+        description: result.error.errors[0].message,
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    setIsSubmitting(false);
+    setEmail("");
+    
+    toast({
+      title: "Thank you!",
+      description: "We'll notify you when Al Maktoum Finance launches.",
+    });
+  };
+
   return (
     <section className="relative min-h-[70vh] bg-gradient-to-b from-sky-400 via-sky-500 to-sky-600 overflow-hidden">
       {/* Cloud-like overlay for depth */}
@@ -16,9 +49,23 @@ const LoginHero = () => {
             <p className="text-lg md:text-xl text-white/90 max-w-md mx-auto lg:mx-0">
               Home or away, local or global — move freely between countries and currencies. Sign up for free, in a tap.
             </p>
-            <Button className="bg-black hover:bg-black/90 text-white rounded-full px-8 py-6 text-base font-medium">
-              Download the app
-            </Button>
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto lg:mx-0">
+              <Input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="flex-1 h-12 bg-white/20 backdrop-blur-sm border-white/30 text-white placeholder:text-white/70 focus:border-white rounded-full px-5"
+                required
+              />
+              <Button 
+                type="submit"
+                disabled={isSubmitting}
+                className="h-12 bg-black hover:bg-black/90 text-white rounded-full px-6 text-base font-medium"
+              >
+                {isSubmitting ? "Submitting..." : "Sign up your interest"}
+              </Button>
+            </form>
           </div>
 
           {/* Right Content - Phone Mockup */}
