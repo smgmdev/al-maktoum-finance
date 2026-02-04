@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Settings, Search, Plus, ArrowDown, Info, MoreHorizontal, ShoppingCart, Home, Dumbbell } from "lucide-react";
+import { ChevronLeft, Settings, Search, Plus, ArrowDown, Info, MoreHorizontal, ShoppingCart, Home, Dumbbell, CreditCard, Send, Repeat } from "lucide-react";
 
 const PhoneMockup1 = () => (
   <div className="w-64 h-[500px] bg-black rounded-[2.5rem] p-3 shadow-2xl">
@@ -144,9 +144,81 @@ const PhoneMockup2 = () => (
   </div>
 );
 
+const PhoneMockup3 = () => (
+  <div className="w-64 h-[500px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-[2.5rem] p-3 shadow-2xl">
+    <div className="w-full h-full bg-gradient-to-b from-blue-500/90 to-blue-700/90 rounded-[2rem] overflow-hidden backdrop-blur-sm">
+      {/* Header */}
+      <div className="flex items-center justify-between px-4 py-4">
+        <ChevronLeft className="w-5 h-5 text-white" />
+        <span className="text-white text-sm font-medium">Transfers</span>
+        <Settings className="w-5 h-5 text-white" />
+      </div>
+      
+      {/* Balance */}
+      <div className="px-4 mb-6">
+        <div className="text-center">
+          <span className="text-white/70 text-sm">Available Balance</span>
+          <p className="text-white text-4xl font-bold mt-1">AED 12,450</p>
+        </div>
+      </div>
+      
+      {/* Quick Actions */}
+      <div className="flex justify-center gap-8 mb-8">
+        {[
+          { icon: Send, label: "Send" },
+          { icon: ArrowDown, label: "Request" },
+          { icon: Repeat, label: "Exchange" },
+        ].map((action, i) => (
+          <div key={i} className="flex flex-col items-center gap-2">
+            <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+              <action.icon className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-white text-xs">{action.label}</span>
+          </div>
+        ))}
+      </div>
+      
+      {/* Recent Transfers */}
+      <div className="px-4">
+        <div className="flex items-center justify-between mb-3">
+          <span className="text-white text-sm font-medium">Recent Transfers</span>
+          <span className="text-white/70 text-xs">View all</span>
+        </div>
+        <div className="space-y-3">
+          <div className="flex items-center justify-between bg-white/10 rounded-xl p-3">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                <CreditCard className="w-4 h-4 text-white" />
+              </div>
+              <div>
+                <span className="text-white text-sm">To USD Account</span>
+                <p className="text-white/60 text-xs">Today, 09:45</p>
+              </div>
+            </div>
+            <span className="text-white text-sm">-AED 5,000</span>
+          </div>
+          
+          <div className="flex items-center justify-between bg-white/10 rounded-xl p-3">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-green-400/30 rounded-full flex items-center justify-center">
+                <Send className="w-4 h-4 text-green-300" />
+              </div>
+              <div>
+                <span className="text-white text-sm">From Ahmed K.</span>
+                <p className="text-white/60 text-xs">Yesterday</p>
+              </div>
+            </div>
+            <span className="text-green-300 text-sm">+AED 1,200</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const SpendingInsights = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [PhoneMockup1, PhoneMockup2];
+  const slides = [PhoneMockup1, PhoneMockup2, PhoneMockup3];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -178,11 +250,14 @@ const SpendingInsights = () => {
             <div className="relative">
               {/* Phone Mockups */}
               <div className="flex gap-4 items-end">
-                <div className={`transition-all duration-500 ${currentSlide === 0 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'}`}>
+                <div className={`transition-all duration-500 ${currentSlide === 0 ? 'opacity-100 scale-100' : 'opacity-40 scale-90'}`}>
                   <PhoneMockup1 />
                 </div>
-                <div className={`transition-all duration-500 ${currentSlide === 1 ? 'opacity-100 scale-100' : 'opacity-60 scale-95'} -ml-20 lg:-ml-10`}>
+                <div className={`transition-all duration-500 ${currentSlide === 1 ? 'opacity-100 scale-100' : 'opacity-40 scale-90'} -ml-32 lg:-ml-24`}>
                   <PhoneMockup2 />
+                </div>
+                <div className={`transition-all duration-500 ${currentSlide === 2 ? 'opacity-100 scale-100' : 'opacity-40 scale-90'} -ml-32 lg:-ml-24`}>
+                  <PhoneMockup3 />
                 </div>
               </div>
             </div>
