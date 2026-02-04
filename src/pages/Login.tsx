@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { Plus, ArrowDown, Info, MoreHorizontal, Home, CirclePlus } from "lucide-react";
 import FeatureSlider from "@/components/login/FeatureSlider";
 import FAQSection from "@/components/login/FAQSection";
+import LoginHero from "@/components/login/LoginHero";
 
 const emailSchema = z.string().trim().email({ message: "Please enter a valid email address" });
 
@@ -47,6 +48,9 @@ const Login = () => {
           Al Maktoum Finance
         </Link>
       </header>
+
+      {/* Hero Section */}
+      <LoginHero />
 
       {/* Main Content */}
       <main className="flex items-center justify-center py-12 px-6">
