@@ -11,9 +11,10 @@ const LoginHero = () => {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover opacity-70"
+        poster="https://images.pexels.com/videos/14918326/pexels-photo-14918326.jpeg?auto=compress&cs=tinysrgb&w=1920"
       >
         <source
-          src="https://videos.pexels.com/video-files/14918326/14918326-uhd_2560_1440_25fps.mp4"
+          src="https://videos.pexels.com/video-files/14918326/14918326-hd_1920_1080_25fps.mp4"
           type="video/mp4"
         />
       </video>
