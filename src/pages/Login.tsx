@@ -8,6 +8,7 @@ import { Plus, ArrowDown, Info, MoreHorizontal, Home, CirclePlus } from "lucide-
 import FeatureSlider from "@/components/login/FeatureSlider";
 import FAQSection from "@/components/login/FAQSection";
 import LoginHero from "@/components/login/LoginHero";
+import FeaturesGrid from "@/components/login/FeaturesGrid";
 import amfLogo from "@/assets/amf-logo.png";
 
 const emailSchema = z.string().trim().email({ message: "Please enter a valid email address" });
@@ -77,6 +78,10 @@ const Login = () => {
 
       {/* Hero Section */}
       <LoginHero />
+
+      {/* Features Grid Section */}
+      <FeaturesGrid />
+
       {/* Feature Slider Section */}
       <div className="bg-black">
         <section className="pt-16 pb-4">
