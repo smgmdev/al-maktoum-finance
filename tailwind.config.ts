@@ -69,8 +69,12 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        serif: ["Playfair Display", "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        serif: ["SF Pro Display", "system-ui", "sans-serif"],
+        sans: ["SF Pro Text", "system-ui", "sans-serif"],
+      },
+      letterSpacing: {
+        tightest: "-0.05em",
+        tighter: "-0.025em",
       },
       keyframes: {
         "accordion-down": {

@@ -1,69 +1,63 @@
-import { Gift, Globe, Headphones, Shield } from "lucide-react";
-
 const features = [
   {
-    icon: Gift,
+    number: "01",
     title: "Exclusive Rewards",
-    description: "Premium cashback, luxury travel perks, and access to members-only events worldwide.",
+    description: "Premium cashback on every purchase. Luxury travel perks. Access to members-only experiences worldwide.",
   },
   {
-    icon: Globe,
+    number: "02",
     title: "Global Access",
-    description: "Accepted at over 80 million locations worldwide with zero foreign transaction fees.",
+    description: "Accepted at over 80 million locations. Zero foreign transaction fees. Seamless international banking.",
   },
   {
-    icon: Headphones,
+    number: "03",
     title: "24/7 Concierge",
-    description: "Personal banking support available anytime, anywhere—your dedicated financial assistant.",
+    description: "Personal banking support anytime, anywhere. Your dedicated financial assistant, always available.",
   },
   {
-    icon: Shield,
+    number: "04",
     title: "Security First",
-    description: "Advanced fraud protection with real-time alerts and cutting-edge encryption technology.",
+    description: "Advanced fraud protection. Real-time alerts. Cutting-edge encryption for complete peace of mind.",
   },
 ];
 
 const FeaturesSection = () => {
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-        <div className="absolute bottom-0 left-1/2 w-full h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-      </div>
-      
-      <div className="container mx-auto max-w-6xl relative z-10">
+    <section className="py-32 px-6 border-t border-border">
+      <div className="container mx-auto max-w-5xl">
         {/* Section Header */}
-        <div className="text-center mb-16 space-y-4">
-          <p className="text-primary uppercase tracking-[0.3em] text-sm font-medium">
+        <div className="mb-20 max-w-2xl">
+          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
             Why Choose Us
           </p>
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-foreground">
-            Banking Reimagined for the{" "}
-            <span className="text-gradient-gold">Elite</span>
+          <h2 className="text-4xl md:text-5xl font-serif font-medium tracking-tightest text-foreground leading-tight">
+            Banking, <span className="font-light italic">simplified.</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Discover the exceptional benefits that set Al Maktoum Finance apart from traditional banking.
-          </p>
         </div>
         
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Features List */}
+        <div className="space-y-0">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-500 hover:shadow-gold animate-fade-in-up"
+              className="group grid md:grid-cols-12 gap-6 py-10 border-t border-border hover:bg-secondary/30 transition-colors duration-500 animate-fade-in-up px-4 -mx-4"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="mb-4 p-3 w-fit rounded-xl bg-gradient-gold shadow-gold">
-                <feature.icon className="w-6 h-6 text-primary-foreground" />
+              <div className="md:col-span-1">
+                <span className="text-xs text-muted-foreground font-mono">
+                  {feature.number}
+                </span>
               </div>
-              <h3 className="text-xl font-serif font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {feature.description}
-              </p>
+              <div className="md:col-span-4">
+                <h3 className="text-xl font-serif font-medium text-foreground group-hover:translate-x-2 transition-transform duration-300">
+                  {feature.title}
+                </h3>
+              </div>
+              <div className="md:col-span-7">
+                <p className="text-muted-foreground leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
