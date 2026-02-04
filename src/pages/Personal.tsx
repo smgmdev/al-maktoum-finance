@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import PersonalHero from "@/components/personal/PersonalHero";
 import TrustBadges from "@/components/personal/TrustBadges";
+import PocketsSection from "@/components/personal/PocketsSection";
 import PersonalFeatures from "@/components/personal/PersonalFeatures";
 import PersonalBenefits from "@/components/personal/PersonalBenefits";
 import PersonalCTA from "@/components/personal/PersonalCTA";
@@ -12,6 +13,7 @@ const Personal = () => {
       <Header />
       <PersonalHero />
       <TrustBadges />
+      <PocketsSection />
       <PersonalFeatures />
       <PersonalBenefits />
       <PersonalCTA />
