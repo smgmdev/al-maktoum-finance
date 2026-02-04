@@ -52,61 +52,6 @@ const Login = () => {
 
       {/* Hero Section */}
       <LoginHero />
-
-      {/* Main Content */}
-      <main className="flex items-center justify-center py-12 px-6">
-        <div className="w-full max-w-4xl flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-24">
-          {/* Login Form */}
-          <div className="w-full max-w-md space-y-6">
-            <div className="space-y-2">
-              <h1 className="text-3xl md:text-4xl font-bold text-white">
-                Welcome back
-              </h1>
-              <p className="text-muted-foreground">
-                Enter the email associated with your Al Maktoum Business account
-              </p>
-            </div>
-
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="h-11 bg-[hsl(215,30%,18%)] border-[hsl(215,25%,25%)] text-white placeholder:text-muted-foreground focus:border-[hsl(210,80%,55%)] rounded-lg px-4"
-                required
-              />
-              
-              <Link 
-                to="#" 
-                className="inline-block text-sm text-[hsl(210,80%,55%)] hover:text-[hsl(210,80%,65%)] transition-colors"
-              >
-                Lost access to my email
-              </Link>
-
-              <Button 
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full h-11 bg-[hsl(215,20%,25%)] hover:bg-[hsl(215,20%,30%)] text-white rounded-lg text-sm font-medium transition-all"
-              >
-                {isSubmitting ? "Continuing..." : "Continue"}
-              </Button>
-            </form>
-
-          </div>
-
-          {/* Visa Card Section */}
-          <div className="hidden lg:flex flex-col items-center">
-            <img 
-              src="/src/assets/visa-card.png" 
-              alt="Al Maktoum Visa Card" 
-              className="w-[320px] h-auto rounded-2xl shadow-2xl"
-            />
-          </div>
-        </div>
-      </main>
-
-
       {/* Feature Slider Section */}
       <section className="pt-16 pb-4">
         <div className="text-center space-y-2 px-6">
