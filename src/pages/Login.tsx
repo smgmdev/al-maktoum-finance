@@ -5,6 +5,7 @@ import { toast } from "@/hooks/use-toast";
 import { z } from "zod";
 import { Link } from "react-router-dom";
 import { Plus, ArrowDown, Info, MoreHorizontal, Home, CirclePlus } from "lucide-react";
+import FeatureSlider from "@/components/login/FeatureSlider";
 
 const emailSchema = z.string().trim().email({ message: "Please enter a valid email address" });
 
@@ -338,6 +339,9 @@ const Login = () => {
           </div>
         </div>
       </section>
+
+      {/* Feature Slider Section */}
+      <FeatureSlider />
 
       {/* Footer */}
       <footer className="p-6 flex items-center justify-between">
