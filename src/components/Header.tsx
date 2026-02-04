@@ -18,14 +18,14 @@ const Header = () => {
             
             {/* Nav Links - Hidden on mobile */}
             <nav className="hidden md:flex items-center gap-6">
+              <a href="/personal" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Personal
+              </a>
+              <a href="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Business
+              </a>
               <a href="#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Features
-              </a>
-              <a href="#about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                About
-              </a>
-              <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Contact
               </a>
             </nav>
           </div>
