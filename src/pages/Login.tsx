@@ -6,6 +6,7 @@ import { z } from "zod";
 import { Link } from "react-router-dom";
 import { Plus, ArrowDown, Info, MoreHorizontal, Home, CirclePlus } from "lucide-react";
 import FeatureSlider from "@/components/login/FeatureSlider";
+import FAQSection from "@/components/login/FAQSection";
 
 const emailSchema = z.string().trim().email({ message: "Please enter a valid email address" });
 
@@ -163,6 +164,9 @@ const Login = () => {
 
       {/* Feature Slider Section */}
       <FeatureSlider />
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Footer */}
       <footer className="p-6 flex items-center justify-between">
