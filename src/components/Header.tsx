@@ -35,8 +35,9 @@ const Header = () => {
             <Button 
               variant="ghost" 
               className="hidden sm:inline-flex text-sm text-muted-foreground hover:text-foreground"
+              asChild
             >
-              Log in
+              <a href="/login">Log in</a>
             </Button>
             <Button 
               onClick={scrollToSignup}
