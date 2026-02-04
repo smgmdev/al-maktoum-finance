@@ -9,6 +9,7 @@ import FeatureSlider from "@/components/login/FeatureSlider";
 import FAQSection from "@/components/login/FAQSection";
 import LoginHero from "@/components/login/LoginHero";
 import FeaturesGrid from "@/components/login/FeaturesGrid";
+import SpendingInsights from "@/components/login/SpendingInsights";
 import amfLogo from "@/assets/amf-logo.png";
 
 const emailSchema = z.string().trim().email({ message: "Please enter a valid email address" });
@@ -81,6 +82,9 @@ const Login = () => {
 
       {/* Features Grid Section */}
       <FeaturesGrid />
+
+      {/* Spending Insights Section */}
+      <SpendingInsights />
 
       {/* Feature Slider Section */}
       <div className="bg-black">
