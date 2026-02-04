@@ -36,7 +36,7 @@ const LoginHero = () => {
           
           <Link to="#whitelist-signup">
             <Button className="mt-4 h-12 bg-white hover:bg-white/90 text-black rounded-full px-8 text-base font-medium">
-              Open an account
+              Sign up
             </Button>
           </Link>
         </div>
