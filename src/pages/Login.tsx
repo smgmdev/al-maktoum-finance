@@ -44,7 +44,7 @@ const Login = () => {
       <header className="p-6">
         <Link to="/" className="flex items-center gap-2 text-lg font-semibold text-white tracking-tight">
           <img src="/src/assets/amf-logo.png" alt="AMF Logo" className="h-8 w-auto" />
-          Al Maktoum
+          Al Maktoum Finance
         </Link>
       </header>
 
