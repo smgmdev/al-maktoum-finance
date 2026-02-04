@@ -43,9 +43,9 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[hsl(210,50%,12%)] via-[hsl(215,45%,10%)] to-[hsl(220,40%,8%)] text-foreground overflow-y-auto">
       {/* Header */}
-      <header className="sticky top-0 z-50 px-6 py-3 bg-black/80 backdrop-blur-md border-b border-white/10">
-        <Link to="/" className="flex items-center gap-2 text-sm font-semibold text-white tracking-tight">
-          <img src={amfLogo} alt="AMF Logo" className="h-6 w-auto" />
+      <header className="fixed top-0 left-0 right-0 z-50 px-6 py-3 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <Link to="/" className="flex items-center gap-2 text-base font-semibold text-white tracking-tight">
+          <img src={amfLogo} alt="AMF Logo" className="h-10 w-auto" />
           Al Maktoum Finance
         </Link>
       </header>
