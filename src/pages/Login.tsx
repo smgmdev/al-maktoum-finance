@@ -8,6 +8,7 @@ import { Plus, ArrowDown, Info, MoreHorizontal, Home, CirclePlus } from "lucide-
 import FeatureSlider from "@/components/login/FeatureSlider";
 import FAQSection from "@/components/login/FAQSection";
 import LoginHero from "@/components/login/LoginHero";
+import amfLogo from "@/assets/amf-logo.png";
 
 const emailSchema = z.string().trim().email({ message: "Please enter a valid email address" });
 
@@ -44,7 +45,7 @@ const Login = () => {
       {/* Header */}
       <header className="p-6">
         <Link to="/" className="flex items-center gap-2 text-lg font-semibold text-white tracking-tight">
-          <img src="/src/assets/amf-logo.png" alt="AMF Logo" className="h-8 w-auto" />
+          <img src={amfLogo} alt="AMF Logo" className="h-8 w-auto" />
           Al Maktoum Finance
         </Link>
       </header>
@@ -124,7 +125,7 @@ const Login = () => {
           {/* Top Row - Logo & Social */}
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2 text-sm font-semibold text-white">
-              <img src="/src/assets/amf-logo.png" alt="AMF Logo" className="h-5 w-auto" />
+              <img src={amfLogo} alt="AMF Logo" className="h-5 w-auto" />
               Al Maktoum Finance
             </Link>
             <div className="flex items-center gap-3">
