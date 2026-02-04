@@ -29,10 +29,10 @@ const features = [
     gradient: "from-[hsl(225,40%,22%)] to-[hsl(235,45%,16%)]",
     visual: (
       <div className="relative flex items-center justify-center h-40">
-        <div className="w-28 h-28 rounded-full border-2 border-white/20 relative">
-          <div className="absolute inset-0 rounded-full border border-orange-400/50" style={{ transform: 'rotateX(60deg)' }}></div>
+        <div className="w-28 h-28 rounded-full border-2 border-white/20 relative flex items-center justify-center">
+          <div className="absolute inset-2 rounded-full border border-orange-400/50"></div>
           <div className="absolute w-2 h-2 bg-orange-400 rounded-full top-1/4 right-1/4"></div>
-          <Globe className="w-16 h-16 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white/30" />
+          <Globe className="w-16 h-16 text-white/30" />
         </div>
         <div className="absolute bottom-0 left-0 right-0 flex justify-center gap-4">
           <div className="w-10 h-10 rounded-full bg-[hsl(220,30%,18%)] flex items-center justify-center">
