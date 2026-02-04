@@ -89,74 +89,13 @@ const Login = () => {
 
           </div>
 
-          {/* QR Code Section */}
-          <div className="hidden lg:flex flex-col items-center space-y-4">
-            <div className="bg-white p-4 rounded-2xl">
-              {/* Simplified QR Code SVG */}
-              <svg width="160" height="160" viewBox="0 0 160 160" className="text-black">
-                {/* QR Code Pattern - Simplified representation */}
-                <rect x="0" y="0" width="160" height="160" fill="white"/>
-                {/* Corner squares */}
-                <rect x="10" y="10" width="40" height="40" fill="black"/>
-                <rect x="16" y="16" width="28" height="28" fill="white"/>
-                <rect x="22" y="22" width="16" height="16" fill="black"/>
-                
-                <rect x="110" y="10" width="40" height="40" fill="black"/>
-                <rect x="116" y="16" width="28" height="28" fill="white"/>
-                <rect x="122" y="22" width="16" height="16" fill="black"/>
-                
-                <rect x="10" y="110" width="40" height="40" fill="black"/>
-                <rect x="16" y="116" width="28" height="28" fill="white"/>
-                <rect x="22" y="122" width="16" height="16" fill="black"/>
-                
-                {/* Center Logo */}
-                <rect x="65" y="65" width="30" height="30" fill="black" rx="4"/>
-                <text x="80" y="85" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">M</text>
-                
-                {/* Random QR pattern */}
-                <rect x="60" y="10" width="8" height="8" fill="black"/>
-                <rect x="76" y="10" width="8" height="8" fill="black"/>
-                <rect x="92" y="10" width="8" height="8" fill="black"/>
-                <rect x="60" y="26" width="8" height="8" fill="black"/>
-                <rect x="84" y="26" width="8" height="8" fill="black"/>
-                <rect x="60" y="42" width="8" height="8" fill="black"/>
-                <rect x="76" y="42" width="8" height="8" fill="black"/>
-                <rect x="92" y="42" width="8" height="8" fill="black"/>
-                
-                <rect x="10" y="60" width="8" height="8" fill="black"/>
-                <rect x="26" y="60" width="8" height="8" fill="black"/>
-                <rect x="42" y="60" width="8" height="8" fill="black"/>
-                <rect x="10" y="76" width="8" height="8" fill="black"/>
-                <rect x="34" y="76" width="8" height="8" fill="black"/>
-                <rect x="10" y="92" width="8" height="8" fill="black"/>
-                <rect x="26" y="92" width="8" height="8" fill="black"/>
-                <rect x="42" y="92" width="8" height="8" fill="black"/>
-                
-                <rect x="110" y="60" width="8" height="8" fill="black"/>
-                <rect x="126" y="60" width="8" height="8" fill="black"/>
-                <rect x="142" y="60" width="8" height="8" fill="black"/>
-                <rect x="118" y="76" width="8" height="8" fill="black"/>
-                <rect x="142" y="76" width="8" height="8" fill="black"/>
-                <rect x="110" y="92" width="8" height="8" fill="black"/>
-                <rect x="126" y="92" width="8" height="8" fill="black"/>
-                <rect x="142" y="92" width="8" height="8" fill="black"/>
-                
-                <rect x="60" y="110" width="8" height="8" fill="black"/>
-                <rect x="76" y="110" width="8" height="8" fill="black"/>
-                <rect x="92" y="110" width="8" height="8" fill="black"/>
-                <rect x="68" y="126" width="8" height="8" fill="black"/>
-                <rect x="84" y="126" width="8" height="8" fill="black"/>
-                <rect x="60" y="142" width="8" height="8" fill="black"/>
-                <rect x="76" y="142" width="8" height="8" fill="black"/>
-                <rect x="92" y="142" width="8" height="8" fill="black"/>
-              </svg>
-            </div>
-            <div className="text-center space-y-1">
-              <p className="text-white font-medium">Log in with QR code</p>
-              <p className="text-muted-foreground text-sm max-w-[200px]">
-                Scan this code with your phone camera to log in instantly
-              </p>
-            </div>
+          {/* Visa Card Section */}
+          <div className="hidden lg:flex flex-col items-center">
+            <img 
+              src="/src/assets/visa-card.png" 
+              alt="Al Maktoum Visa Card" 
+              className="w-[320px] h-auto rounded-2xl shadow-2xl"
+            />
           </div>
         </div>
       </main>
