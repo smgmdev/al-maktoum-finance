@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
@@ -15,6 +15,27 @@ const emailSchema = z.string().trim().email({ message: "Please enter a valid ema
 const Login = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down & past threshold
+        setIsHeaderVisible(false);
+      } else {
+        // Scrolling up
+        setIsHeaderVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,8 +64,12 @@ const Login = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[hsl(210,50%,12%)] via-[hsl(215,45%,10%)] to-[hsl(220,40%,8%)] text-foreground overflow-y-auto">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 px-6 py-3 bg-white/80 backdrop-blur-md border-b border-black/10">
-        <Link to="/" className="flex items-center gap-2 text-base font-semibold text-black tracking-tight">
+      <header 
+        className={`fixed top-0 left-0 right-0 z-50 px-6 py-3 bg-black/90 backdrop-blur-md border-b border-white/10 transition-transform duration-300 ${
+          isHeaderVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <Link to="/" className="flex items-center gap-2 text-base font-semibold text-white tracking-tight">
           <img src={amfLogo} alt="AMF Logo" className="h-10 w-auto" />
           Al Maktoum Finance
         </Link>
