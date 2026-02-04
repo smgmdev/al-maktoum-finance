@@ -42,7 +42,8 @@ const Login = () => {
     <div className="min-h-screen bg-gradient-to-br from-[hsl(210,50%,12%)] via-[hsl(215,45%,10%)] to-[hsl(220,40%,8%)] text-foreground overflow-y-auto">
       {/* Header */}
       <header className="p-6">
-        <Link to="/" className="text-lg font-semibold text-white tracking-tight">
+        <Link to="/" className="flex items-center gap-2 text-lg font-semibold text-white tracking-tight">
+          <img src="/src/assets/amf-logo.png" alt="AMF Logo" className="h-8 w-auto" />
           Al Maktoum
         </Link>
       </header>
