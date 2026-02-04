@@ -56,14 +56,12 @@ const LoginHero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-24 md:py-32 flex flex-col justify-center min-h-[80vh]">
         <div className="max-w-2xl space-y-6">
-          <p className="text-white/70 text-lg">Main account</p>
-          
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Open an Al Maktoum account for free
+            Sign up for Al Maktoum Finance account and win UAE Golden Visa
           </h1>
           
           <p className="text-lg md:text-xl text-white/80 max-w-lg">
-            Smoothly send, spend, save, and more with 24/7 customer support in-app. Your money will thank you.
+            Register your interest to open an Al Maktoum Finance online payments account and get a chance to win UAE Golden Visa.
           </p>
           
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md pt-2">
