@@ -103,6 +103,12 @@ const Login = () => {
 
 
       {/* Feature Slider Section */}
+      <section className="pt-16 pb-4">
+        <div className="text-center space-y-2 px-6">
+          <p className="text-muted-foreground text-sm">Discover more</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-white">Al Maktoum Business Features</h2>
+        </div>
+      </section>
       <FeatureSlider />
 
       {/* FAQ Section */}
