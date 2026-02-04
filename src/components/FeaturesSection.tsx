@@ -1,63 +1,72 @@
+import { CreditCard, Globe, Shield, Headphones, TrendingUp, Zap } from "lucide-react";
+
 const features = [
   {
-    number: "01",
-    title: "Exclusive Rewards",
-    description: "Premium cashback on every purchase. Luxury travel perks. Access to members-only experiences worldwide.",
+    icon: Globe,
+    title: "Global payments",
+    description: "Send and receive money in 25+ currencies with the real exchange rate.",
   },
   {
-    number: "02",
-    title: "Global Access",
-    description: "Accepted at over 80 million locations. Zero foreign transaction fees. Seamless international banking.",
+    icon: CreditCard,
+    title: "Multi-currency accounts",
+    description: "Hold, exchange, and manage multiple currencies in one place.",
   },
   {
-    number: "03",
-    title: "24/7 Concierge",
-    description: "Personal banking support anytime, anywhere. Your dedicated financial assistant, always available.",
+    icon: TrendingUp,
+    title: "Smart analytics",
+    description: "Track spending patterns and get insights to optimize your finances.",
   },
   {
-    number: "04",
-    title: "Security First",
-    description: "Advanced fraud protection. Real-time alerts. Cutting-edge encryption for complete peace of mind.",
+    icon: Shield,
+    title: "Bank-grade security",
+    description: "Advanced encryption and fraud protection keeps your money safe.",
+  },
+  {
+    icon: Zap,
+    title: "Instant transfers",
+    description: "Move money instantly between accounts and to other users.",
+  },
+  {
+    icon: Headphones,
+    title: "24/7 Support",
+    description: "Get help whenever you need it from our dedicated support team.",
   },
 ];
 
 const FeaturesSection = () => {
   return (
-    <section className="py-32 px-6 border-t border-border">
-      <div className="container mx-auto max-w-5xl">
+    <section id="features" className="py-24 md:py-32 px-6 bg-background">
+      <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="mb-20 max-w-2xl">
-          <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-4">
-            Why Choose Us
+        <div className="text-center mb-16 md:mb-20 max-w-2xl mx-auto">
+          <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4">
+            Why choose us
           </p>
-          <h2 className="text-4xl md:text-5xl font-serif font-medium tracking-tightest text-foreground leading-tight">
-            Banking, <span className="font-light italic">simplified.</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight mb-6">
+            The all-in-one financial account
           </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Scale — and save — with global payments, multi-currency accounts, and smarter spending.
+          </p>
         </div>
         
-        {/* Features List */}
-        <div className="space-y-0">
+        {/* Features Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="group grid md:grid-cols-12 gap-6 py-10 border-t border-border hover:bg-secondary/30 transition-colors duration-500 animate-fade-in-up px-4 -mx-4"
+              className="feature-card animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="md:col-span-1">
-                <span className="text-xs text-muted-foreground font-mono">
-                  {feature.number}
-                </span>
+              <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-5">
+                <feature.icon className="w-6 h-6 text-foreground" />
               </div>
-              <div className="md:col-span-4">
-                <h3 className="text-xl font-serif font-medium text-foreground group-hover:translate-x-2 transition-transform duration-300">
-                  {feature.title}
-                </h3>
-              </div>
-              <div className="md:col-span-7">
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-3">
+                {feature.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

@@ -41,66 +41,65 @@ const WhitelistSignup = () => {
   };
 
   return (
-    <section id="whitelist-signup" className="py-32 px-6 border-t border-border">
-      <div className="container mx-auto max-w-2xl">
-        <div className="text-center space-y-10 animate-fade-in-up">
+    <section id="whitelist-signup" className="py-24 md:py-32 px-6 bg-background">
+      <div className="container mx-auto max-w-3xl">
+        <div className="text-center space-y-8 animate-fade-in-up">
           {/* Section Header */}
           <div className="space-y-4">
-            <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">
-              Exclusive Access
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+              Early Access
             </p>
-            <h2 className="text-4xl md:text-5xl font-serif font-medium tracking-tightest text-foreground">
-              Join the <span className="font-light italic">Waitlist</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight">
+              Join the waitlist
             </h2>
-            <p className="text-muted-foreground max-w-md mx-auto leading-relaxed">
-              Be among the first. Enter your email for exclusive early access 
-              and founding member benefits.
+            <p className="text-lg text-muted-foreground max-w-lg mx-auto leading-relaxed">
+              Be among the first to experience the future of finance. Sign up for exclusive early access.
             </p>
           </div>
           
           {/* Signup Form */}
           {!isSubmitted ? (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-4">
               <Input
                 type="email"
-                placeholder="your@email.com"
+                placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 h-14 bg-transparent border-border text-foreground placeholder:text-muted-foreground focus:border-foreground focus:ring-0 text-center sm:text-left"
+                className="flex-1 h-12 bg-card border-border text-foreground placeholder:text-muted-foreground focus:border-foreground rounded-full px-5"
                 required
               />
               <Button 
                 type="submit"
                 disabled={isSubmitting}
-                className="h-14 px-8 bg-foreground text-background hover:bg-foreground/90 text-sm tracking-[0.1em] uppercase font-medium transition-all duration-300 group"
+                className="h-12 px-6 bg-foreground text-background hover:bg-foreground/90 rounded-full text-base font-medium transition-all duration-300 group"
               >
                 {isSubmitting ? (
                   "Joining..."
                 ) : (
                   <>
-                    Join
+                    Get started
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </>
                 )}
               </Button>
             </form>
           ) : (
-            <div className="py-10 space-y-4">
-              <div className="w-16 h-16 mx-auto border border-foreground flex items-center justify-center">
-                <Check className="w-6 h-6 text-foreground" />
+            <div className="py-8 space-y-4">
+              <div className="w-16 h-16 mx-auto bg-foreground rounded-full flex items-center justify-center">
+                <Check className="w-8 h-8 text-background" />
               </div>
-              <h3 className="text-xl font-serif font-medium text-foreground">
-                You're on the list.
+              <h3 className="text-xl font-semibold text-foreground">
+                You're on the list!
               </h3>
               <p className="text-muted-foreground">
-                We'll be in touch with exclusive updates.
+                We'll be in touch with exclusive updates and early access.
               </p>
             </div>
           )}
           
           {/* Trust Note */}
-          <p className="text-xs text-muted-foreground">
-            We respect your privacy. Unsubscribe anytime.
+          <p className="text-sm text-muted-foreground">
+            No spam, ever. Unsubscribe anytime.
           </p>
         </div>
       </div>
