@@ -31,15 +31,14 @@ const AccessWorldSection = () => {
               onClick={() => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-white hover:bg-white/90 text-black rounded-full px-6 h-12 text-base font-medium"
             >
-              Sign Up for personal account
+              Sign Up For Personal Account
             </Button>
             <BookCallDialog 
               trigger={
                 <Button 
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/10 rounded-full px-6 h-12 text-base font-medium"
+                  className="bg-white hover:bg-white/90 text-black rounded-full px-6 h-12 text-base font-medium"
                 >
-                  Book a call for business account
+                  Book A Call For Business Account
                 </Button>
               }
             />
