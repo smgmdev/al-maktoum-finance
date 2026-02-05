@@ -32,11 +32,22 @@ const BookCallDialog = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase.functions.invoke("send-book-call-email", {
+      // Save to database
+      const { error: dbError } = await supabase
+        .from("book_call_requests")
+        .insert({
+          full_name: formData.fullName,
+          email: formData.email,
+          whatsapp_number: formData.whatsappNumber,
+          area_of_interest: formData.areaOfInterest,
+        });
+
+      if (dbError) throw dbError;
+
+      // Send admin notification email
+      await supabase.functions.invoke("send-book-call-email", {
         body: formData,
       });
-
-      if (error) throw error;
 
       toast({
         title: "Request submitted!",
