@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import { ArrowDown } from "lucide-react";
 import heroImage from "@/assets/dubai-frame-hero.webp";
 
 const LoginHero = () => {
@@ -83,13 +82,21 @@ const LoginHero = () => {
               Sign Up your interest for Al Maktoum Finance Account and get a chance to win UAE Golden Visa for free.
             </p>
             
-            {/* Learn More Link */}
+            {/* T&C Link */}
             <button 
-              onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-              className="flex items-center gap-2 text-white/70 hover:text-white text-base transition-colors"
+              onClick={() => {
+                document.getElementById('faq-section')?.scrollIntoView({ behavior: 'smooth' });
+                // Small delay to allow scroll, then open the accordion
+                setTimeout(() => {
+                  const accordionTrigger = document.querySelector('[data-accordion-item="golden-visa"]');
+                  if (accordionTrigger) {
+                    (accordionTrigger as HTMLButtonElement).click();
+                  }
+                }, 500);
+              }}
+              className="text-white/70 hover:text-white text-base transition-colors underline"
             >
-              Learn more
-              <ArrowDown className="w-4 h-4" />
+              T&C Applies
             </button>
           </div>
           
