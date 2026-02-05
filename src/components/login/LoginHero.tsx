@@ -59,13 +59,14 @@ const LoginHero = () => {
   return (
     <section id="hero" className="relative min-h-screen overflow-hidden bg-black">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+      <img 
+        src={heroImage} 
+        alt="Dubai Frame"
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
       
       {/* Dark Overlay for text readability */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24 md:pt-40 md:pb-32 flex flex-col justify-center min-h-screen">
