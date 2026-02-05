@@ -174,7 +174,7 @@ const FeatureSlider = () => {
             key={index}
             onClick={() => scrollTo(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              selectedIndex === index ? "bg-white w-4" : "bg-white/30"
+              selectedIndex === index ? "bg-black w-4" : "bg-black/30"
             }`}
           />
         ))}
