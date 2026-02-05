@@ -1,10 +1,10 @@
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -58,8 +58,10 @@ const faqs = [
 ];
 
 const FAQSection = () => {
+  const [openItem, setOpenItem] = useState<string | undefined>(undefined);
+
   return (
-    <section className="py-16 px-6 bg-white">
+    <section id="faq-section" className="py-16 px-6 bg-white">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -70,14 +72,23 @@ const FAQSection = () => {
         </div>
 
         {/* Accordion */}
-        <Accordion type="single" collapsible className="space-y-0">
+        <Accordion 
+          type="single" 
+          collapsible 
+          className="space-y-0"
+          value={openItem}
+          onValueChange={setOpenItem}
+        >
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
               className="border-b border-gray-200 py-0"
             >
-              <AccordionTrigger className="text-left text-lg font-medium text-black hover:no-underline py-4">
+              <AccordionTrigger 
+                className="text-left text-lg font-medium text-black hover:no-underline py-4"
+                {...(index === 0 ? { 'data-accordion-item': 'golden-visa', onClick: () => setOpenItem(openItem === 'item-0' ? undefined : 'item-0') } : {})}
+              >
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-gray-600 pb-4">
