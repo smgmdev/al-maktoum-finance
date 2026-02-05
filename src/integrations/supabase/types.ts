@@ -14,6 +14,33 @@ export type Database = {
   }
   public: {
     Tables: {
+      book_call_requests: {
+        Row: {
+          area_of_interest: string
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          whatsapp_number: string
+        }
+        Insert: {
+          area_of_interest: string
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          whatsapp_number: string
+        }
+        Update: {
+          area_of_interest?: string
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          whatsapp_number?: string
+        }
+        Relationships: []
+      }
       email_signups: {
         Row: {
           created_at: string
