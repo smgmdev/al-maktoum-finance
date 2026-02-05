@@ -114,7 +114,7 @@ const TermsAndConditions = () => {
           <section className="space-y-4">
             <h2 className="text-xl font-semibold text-gray-900">10. Contact Us</h2>
             <p>
-              If you have any questions about these Terms, please contact us at legal@almaktoumfinance.com
+              If you have any questions about these Terms, please contact us at privacy@almaktoumfinance.com
             </p>
           </section>
         </div>
