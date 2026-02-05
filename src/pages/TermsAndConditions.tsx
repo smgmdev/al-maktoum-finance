@@ -1,21 +1,10 @@
-import { Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import PageLayout from "@/components/layout/PageLayout";
 
 const TermsAndConditions = () => {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="border-b border-gray-200 bg-white sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-6 py-4">
-          <Link to="/" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-            Back to Home
-          </Link>
-        </div>
-      </header>
-
+    <PageLayout>
       {/* Content */}
-      <main className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-4xl mx-auto px-6 py-12">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Terms and Conditions</h1>
         
         <div className="prose prose-gray max-w-none space-y-6 text-gray-700">
@@ -129,15 +118,8 @@ const TermsAndConditions = () => {
             </p>
           </section>
         </div>
-      </main>
-
-      {/* Footer */}
-      <footer className="border-t border-gray-200 bg-gray-50 py-8">
-        <div className="max-w-4xl mx-auto px-6 text-center text-sm text-gray-500">
-          <p>© Al Maktoum Finance 2026 by AbdulHakim AlMaktoum Kanak Financial Brokerage LLC.</p>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </PageLayout>
   );
 };
 
