@@ -9,35 +9,47 @@ import { Link } from "react-router-dom";
 const faqs = [
   {
     question: "Why Al Maktoum Finance?",
-    answer: "Al Maktoum Finance presents an advanced, fully compliant financial services solution, seamlessly integrating traditional and digital banking into a unified and intuitive platform. Utilizing a collaborative multi-partner strategy, we empower both individuals and businesses with innovative financial tools.",
+    answer: "Al Maktoum Finance follows a modern online payment system infrastructure to facilitate online payments and transfers quickly and smoothly. We present an advanced, fully compliant payments and banking solution, seamlessly integrating fiat and digital assets into a unified and intuitive platform. Utilizing a collaborative multi-partner strategy, we empower both individuals and businesses with innovative financial tools.",
+  },
+  {
+    question: "What are Fiat Assets?",
+    answer: "Fiat assets represent traditional money that has been declared legal tender by a government. These include currencies like the US dollar (USD), the euro (EUR), and the British pound (GBP). Fiat money is not backed by physical commodities but by the trust in the issuing government.",
+  },
+  {
+    question: "What are Digital Assets?",
+    answer: "Digital assets are any assets that exist in digital form and are exchanged or stored on a blockchain. These include cryptocurrencies (e.g. Bitcoin, Ethereum), stablecoins (e.g. USDC, USDT), Central Bank Digital Currencies (CBDCs), and non-fungible tokens (NFTs). They are decentralized, traceable, and offer new models of value storage and transfer.",
+  },
+  {
+    question: "What is Tokenization?",
+    answer: "Tokenization is the process of converting ownership of a physical or digital asset into a blockchain-based token. It allows for easier transferability, fractional ownership, increased liquidity, and reduced transaction costs. Real estate, art, shares, and more can be tokenized to enable more efficient investment access.",
+  },
+  {
+    question: "What is a Custody Account?",
+    answer: "A custody account is a secure account where digital or fiat assets are held by a qualified custodian on behalf of the customer. It is designed to safeguard assets from misuse, theft, or mismanagement. Al Maktoum Finance partners with licensed custodians to ensure the highest standards of protection and regulatory compliance.",
   },
   {
     question: "What documents do I need to open a personal account?",
-    answer: "Opening a personal account with Al Maktoum Finance is fully online and fast. You will need a valid government-issued ID, a proof of address (such as a utility bill), and in some cases, a short video verification. The onboarding process follows strict KYC/AML protocols and usually takes just a few minutes to complete.",
+    answer: "Opening a personal account with Al Maktoum Finance is simple, fully online, and takes just a few minutes. You will need a valid government-issued ID and a proof of address (such as a utility bill). Our streamlined onboarding process follows strict KYC/AML protocols while making it easy for you to get started quickly.",
   },
   {
-    question: "How much does it cost to open an account?",
-    answer: "There is no cost to open a personal account with Al Maktoum Finance. Account maintenance and transaction fees may apply depending on the services you use. A detailed fee schedule is available on our platform.",
+    question: "How much does it cost to open an account on Al Maktoum Finance?",
+    answer: "There is no cost to open a personal account with Al Maktoum Finance. Account maintenance and transaction fees may apply depending on the services you use. A detailed fee schedule is available in our platform.",
   },
   {
-    question: "How do I deposit money into my account?",
-    answer: "You can deposit money into your Al Maktoum Finance account by transferring currency via bank wire (local or international transfers). Our system supports major currencies and provides seamless deposit experiences through our partner banking rails.",
-  },
-  {
-    question: "How do I withdraw money from my account?",
-    answer: "Withdrawals from your Al Maktoum Finance account can be made through bank transfers. You can send funds to your traditional bank account via local or international wire transfers. All withdrawal requests are subject to verification and security checks.",
-  },
-  {
-    question: "What are the exchange rates?",
+    question: "What are the exchange fees?",
     answer: "Al Maktoum Finance applies competitive real-time exchange rates based on market data. We work with liquidity providers to offer fair pricing with full transparency. All rates are visible in the platform before executing a transaction, and we do not apply hidden fees or spreads.",
   },
   {
-    question: "Is Al Maktoum Finance a bank?",
-    answer: "Al Maktoum Finance is not an FDIC-insured depository institution or bank. We operate as a financial services platform in partnership with licensed banks and custodians. While we prioritize security and compliance, we work with regulated partners to ensure the highest standards of protection.",
+    question: "What is a Qualified Custodian?",
+    answer: "A Qualified Custodian is a financial institution legally authorized to hold assets on behalf of clients. This includes banks, brokers, and trust companies that meet strict regulatory requirements. In the context of digital assets, qualified custodians are responsible for the secure storage and segregation of client funds, protecting them in the event of bankruptcy or insolvency.",
+  },
+  {
+    question: "Who are Al Maktoum Finance customers?",
+    answer: "Al Maktoum Finance serves individuals, freelancers, SMEs, and corporates that seek flexible and secure financial solutions combining fiat and digital assets. Our target customers span the Middle East, Asia Pacific, and African countries—from digital asset beginners to sophisticated investors and business users operating globally across multiple jurisdictions.",
   },
   {
     question: "Are customers' assets secure?",
-    answer: "Yes. Al Maktoum Finance is a security-first platform. We combine institutional-grade security, end-to-end encryption, and 24/7 monitoring. Our team includes cybersecurity experts with years of experience in banking and financial security. Customer assets are protected against unauthorized access.",
+    answer: "Yes. Al Maktoum Finance is a security-first platform. We combine institutional-grade custody, end-to-end encryption, multi-signature protocols, and 24/7 monitoring. Our team includes cybersecurity experts with years of experience in banking, defense, and blockchain security. Customer assets are never commingled and are protected against unauthorized access.",
   },
 ];
 
