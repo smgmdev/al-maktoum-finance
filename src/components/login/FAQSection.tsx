@@ -8,20 +8,36 @@ import { Link } from "react-router-dom";
 
 const faqs = [
   {
-    question: "How do I open an Al Maktoum Business account?",
-    answer: "Opening an Al Maktoum Business account is quick and easy. Simply download our app or visit our website, provide your business details, verify your identity, and you'll be ready to start managing your finances in minutes.",
+    question: "Why Al Maktoum Finance?",
+    answer: "Al Maktoum Finance presents an advanced, fully compliant financial services solution, seamlessly integrating traditional and digital banking into a unified and intuitive platform. Utilizing a collaborative multi-partner strategy, we empower both individuals and businesses with innovative financial tools.",
   },
   {
-    question: "Is Al Maktoum Business a bank?",
-    answer: "Al Maktoum Finance is a licensed financial institution that offers banking services including multi-currency accounts, international transfers, and business expense management. Your funds are protected and held securely.",
+    question: "What documents do I need to open a personal account?",
+    answer: "Opening a personal account with Al Maktoum Finance is fully online and fast. You will need a valid government-issued ID, a proof of address (such as a utility bill), and in some cases, a short video verification. The onboarding process follows strict KYC/AML protocols and usually takes just a few minutes to complete.",
   },
   {
-    question: "Am I eligible for an Al Maktoum Business account?",
-    answer: "Al Maktoum Business is available to registered businesses, freelancers, and self-employed individuals. You'll need to provide valid business documentation and complete our verification process.",
+    question: "How much does it cost to open an account?",
+    answer: "There is no cost to open a personal account with Al Maktoum Finance. Account maintenance and transaction fees may apply depending on the services you use. A detailed fee schedule is available on our platform.",
   },
   {
-    question: "Is Al Maktoum Business the right choice for my business?",
-    answer: "Al Maktoum Business is ideal for companies that operate internationally, need multi-currency support, or want to streamline their expense management. We offer competitive rates and powerful tools for businesses of all sizes.",
+    question: "How do I deposit money into my account?",
+    answer: "You can deposit money into your Al Maktoum Finance account by transferring currency via bank wire (local or international transfers). Our system supports major currencies and provides seamless deposit experiences through our partner banking rails.",
+  },
+  {
+    question: "How do I withdraw money from my account?",
+    answer: "Withdrawals from your Al Maktoum Finance account can be made through bank transfers. You can send funds to your traditional bank account via local or international wire transfers. All withdrawal requests are subject to verification and security checks.",
+  },
+  {
+    question: "What are the exchange rates?",
+    answer: "Al Maktoum Finance applies competitive real-time exchange rates based on market data. We work with liquidity providers to offer fair pricing with full transparency. All rates are visible in the platform before executing a transaction, and we do not apply hidden fees or spreads.",
+  },
+  {
+    question: "Is Al Maktoum Finance a bank?",
+    answer: "Al Maktoum Finance is not an FDIC-insured depository institution or bank. We operate as a financial services platform in partnership with licensed banks and custodians. While we prioritize security and compliance, we work with regulated partners to ensure the highest standards of protection.",
+  },
+  {
+    question: "Are customers' assets secure?",
+    answer: "Yes. Al Maktoum Finance is a security-first platform. We combine institutional-grade security, end-to-end encryption, and 24/7 monitoring. Our team includes cybersecurity experts with years of experience in banking and financial security. Customer assets are protected against unauthorized access.",
   },
 ];
 
