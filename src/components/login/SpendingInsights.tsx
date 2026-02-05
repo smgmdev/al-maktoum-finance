@@ -246,20 +246,25 @@ const SpendingInsights = () => {
           </div>
 
           {/* Right Phone Slider */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Phone Mockups */}
-              <div className="flex gap-4 items-end">
-                <div className={`transition-all duration-500 ${currentSlide === 0 ? 'opacity-100 scale-100' : 'opacity-40 scale-90'}`}>
+          <div className="flex justify-center lg:justify-end overflow-hidden">
+            <div className="relative w-full max-w-lg">
+              {/* Phone Mockups Carousel */}
+              <div 
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(calc(-${currentSlide * 280}px + 20px))` }}
+              >
+                <div className="flex-shrink-0 px-2">
                   <PhoneMockup1 />
                 </div>
-                <div className={`transition-all duration-500 ${currentSlide === 1 ? 'opacity-100 scale-100' : 'opacity-40 scale-90'} -ml-32 lg:-ml-24`}>
+                <div className="flex-shrink-0 px-2 -ml-16">
                   <PhoneMockup2 />
                 </div>
-                <div className={`transition-all duration-500 ${currentSlide === 2 ? 'opacity-100 scale-100' : 'opacity-40 scale-90'} -ml-32 lg:-ml-24`}>
+                <div className="flex-shrink-0 px-2 -ml-16">
                   <PhoneMockup3 />
                 </div>
               </div>
+              {/* Fade overlay on the right edge */}
+              <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent pointer-events-none" />
             </div>
           </div>
         </div>
