@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
-import heroImage from "@/assets/dubai-frame.webp";
+import heroImage from "@/assets/dubai-frame-hd.jpg";
 
 const LoginHero = () => {
   const [email, setEmail] = useState("");
