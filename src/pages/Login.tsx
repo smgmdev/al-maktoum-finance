@@ -5,9 +5,8 @@ import FeatureSlider from "@/components/login/FeatureSlider";
 import FAQSection from "@/components/login/FAQSection";
 import LoginHero from "@/components/login/LoginHero";
 import FeaturesGrid from "@/components/login/FeaturesGrid";
+import BookCallDialog from "@/components/login/BookCallDialog";
 import amfLogo from "@/assets/amf-logo.png";
-import amfLogoBlack from "@/assets/amf-logo-black.png";
-
 const Login = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -78,6 +77,16 @@ const Login = () => {
 
       {/* FAQ Section */}
       <FAQSection />
+
+      {/* Book a Call CTA Section */}
+      <section className="px-6 py-16 bg-[#1a1a1a]">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 max-w-2xl">
+            Are you looking for high level corporate business bank account with flexible banking solutions?
+          </h2>
+          <BookCallDialog />
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="px-6 py-10 bg-[#1a1a1a]">
