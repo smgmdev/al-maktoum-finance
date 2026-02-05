@@ -33,12 +33,12 @@ const LoginHero = () => {
           
           {/* Main Heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1]">
-            Payments built for growth
+            Sign up and win UAE golden visa
           </h1>
           
           {/* Description */}
           <p className="text-lg md:text-xl text-white/80 max-w-md leading-relaxed">
-            Combine your sales and your company finances into one account with Al Maktoum Finance. From next-day settlement to transparent fees — access everything together.
+            Sign up your interest for Al Maktoum Finance account and get a chance to win UAE golden visa for free.
           </p>
           
           {/* Terms Link */}
