@@ -29,9 +29,10 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("Missing required fields");
     }
 
+    // Using Resend test domain - change 'to' to your Resend account email
     const emailResponse = await resend.emails.send({
-      from: "Al Maktoum Finance <noreply@almaktoumfinance.com>",
-      to: ["noreply@almaktoumfinance.com"],
+      from: "Al Maktoum Finance <onboarding@resend.dev>",
+      to: ["YOUR_RESEND_ACCOUNT_EMAIL@example.com"], // Replace with your email
       subject: "New corporate business banking request",
       html: `
         <h1>New Corporate Business Banking Request</h1>
