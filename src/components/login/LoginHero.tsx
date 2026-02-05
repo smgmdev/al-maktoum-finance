@@ -88,7 +88,7 @@ const LoginHero = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50 rounded-full px-5 focus:bg-white/20 focus:border-white/40"
+              className="flex-1 h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50 rounded-full px-5 focus:border-white focus:ring-0 focus-visible:ring-0 focus-visible:ring-offset-0"
               required
               disabled={isSubmitting}
             />
