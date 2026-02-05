@@ -52,7 +52,10 @@ const Login = () => {
           </Link>
 
           {/* Right Actions - Absolute positioned */}
-          <Button className="absolute right-0 bg-white hover:bg-white/90 text-black rounded-full px-6 h-10 text-sm font-medium">
+          <Button 
+            onClick={() => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })}
+            className="absolute right-0 bg-white hover:bg-white/90 text-black rounded-full px-6 h-10 text-sm font-medium"
+          >
             Sign up
           </Button>
         </div>
