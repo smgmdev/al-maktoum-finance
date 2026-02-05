@@ -92,13 +92,23 @@ const LoginHero = () => {
               required
               disabled={isSubmitting}
             />
-            <Button 
-              type="submit"
-              className="bg-white hover:bg-white/90 text-black rounded-full px-8 h-12 text-base font-medium whitespace-nowrap"
-              disabled={isSubmitting}
-            >
-              {isSubmitting ? "Signing up..." : "Sign up"}
-            </Button>
+            <div className="flex gap-3">
+              <Button 
+                type="submit"
+                className="bg-white hover:bg-white/90 text-black rounded-full px-8 h-12 text-base font-medium whitespace-nowrap"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Signing up..." : "Sign up"}
+              </Button>
+              <Button 
+                type="button"
+                variant="outline"
+                className="border-white/30 bg-transparent hover:bg-white/10 text-white rounded-full px-8 h-12 text-base font-medium whitespace-nowrap"
+                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Learn more
+              </Button>
+            </div>
           </form>
         </div>
       </div>
