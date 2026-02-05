@@ -1,7 +1,17 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import heroImage from "@/assets/personal-hero.jpg";
 
 const LoginHero = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle signup logic here
+    console.log("Sign up with:", email);
+  };
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-black">
       {/* Background Image */}
@@ -36,18 +46,23 @@ const LoginHero = () => {
             <a href="#" className="underline hover:text-white transition-colors">Fees and T&Cs</a> apply.
           </p>
           
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4 pt-2">
-            <Button className="bg-white hover:bg-white/90 text-black rounded-full px-8 h-12 text-base font-medium">
-              Get started
-            </Button>
+          {/* Sign Up Form */}
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 pt-2 max-w-md">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50 rounded-full px-5 focus:bg-white/20 focus:border-white/40"
+              required
+            />
             <Button 
-              variant="outline" 
-              className="border-white/40 bg-transparent hover:bg-white/10 text-white rounded-full px-8 h-12 text-base font-medium"
+              type="submit"
+              className="bg-white hover:bg-white/90 text-black rounded-full px-8 h-12 text-base font-medium whitespace-nowrap"
             >
-              Speak to Sales
+              Sign up
             </Button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
