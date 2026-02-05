@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 
 const faqs = [
   {
+    question: "How to win UAE Golden Visa?",
+    answer: "Sign Up for Al Maktoum Finance Account opening, and when Al Maktoum Finance launches online banking services, create an account and move your salary for 3 months in a row. There will be automatic system draw among the customers that are eligible to participate. The winner will receive UAE Golden Visa for 10 years.",
+  },
+  {
     question: "Why Al Maktoum Finance?",
     answer: "Al Maktoum Finance follows a modern online payment system infrastructure to facilitate online payments and transfers quickly and smoothly. We present an advanced, fully compliant payments and banking solution, seamlessly integrating fiat and digital assets into a unified and intuitive platform. Utilizing a collaborative multi-partner strategy, we empower both individuals and businesses with innovative financial tools.",
   },
