@@ -9,15 +9,15 @@ const features = [
     gradient: "from-[hsl(220,40%,20%)] to-[hsl(230,45%,15%)]",
     visual: (
       <div className="relative flex items-center justify-center h-40">
-        <div className="text-6xl font-bold text-white/20">£ $ €</div>
+        <div className="text-6xl font-bold text-white/20">$ € ¥</div>
         <div className="absolute bottom-0 left-0 right-0 bg-[hsl(220,30%,12%)] rounded-lg p-2 text-xs">
           <div className="flex justify-between text-white/60">
-            <span>GBP</span>
-            <span className="text-green-400">+£10,000</span>
+            <span>USD</span>
+            <span className="text-green-400">+$10,000</span>
           </div>
           <div className="flex justify-between text-white/40">
             <span>J Perez</span>
-            <span>-£11,930.40</span>
+            <span>-$11,930.40</span>
           </div>
         </div>
       </div>
@@ -60,8 +60,8 @@ const features = [
           <div className="w-20 h-32 bg-gradient-to-br from-gray-400 to-gray-600 rounded-lg transform rotate-[5deg] relative left-4"></div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 bg-[hsl(220,30%,12%)] rounded-lg p-3">
-          <div className="text-white font-semibold">£75,080</div>
-          <div className="text-white/40 text-xs">Left of £100,000</div>
+          <div className="text-white font-semibold">$75,080</div>
+          <div className="text-white/40 text-xs">Left of $100,000</div>
           <div className="w-full h-1 bg-white/20 rounded-full mt-2">
             <div className="w-3/4 h-full bg-orange-400 rounded-full"></div>
           </div>
@@ -88,7 +88,7 @@ const features = [
             <div className="text-white text-xs">Iced latte ··0034</div>
             <div className="text-white/40 text-[10px]">07:15</div>
           </div>
-          <span className="text-green-400 text-xs">+£5.50</span>
+          <span className="text-green-400 text-xs">+$5.50</span>
         </div>
       </div>
     ),
