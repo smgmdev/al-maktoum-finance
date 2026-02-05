@@ -256,10 +256,10 @@ const SpendingInsights = () => {
                 <div className="flex-shrink-0 px-2">
                   <PhoneMockup1 />
                 </div>
-                <div className="flex-shrink-0 px-2 -ml-16">
+                <div className="flex-shrink-0 px-2 ml-4">
                   <PhoneMockup2 />
                 </div>
-                <div className="flex-shrink-0 px-2 -ml-16">
+                <div className="flex-shrink-0 px-2 ml-4">
                   <PhoneMockup3 />
                 </div>
               </div>
