@@ -33,6 +33,11 @@ const LoginHero = () => {
           throw error;
         }
       } else {
+        // Send admin notification email
+        await supabase.functions.invoke("send-book-call-email", {
+          body: { type: "email_signup", email: email.trim().toLowerCase() },
+        });
+        
         toast({
           title: "Success!",
           description: "You're now entered to win the UAE Golden Visa!",
