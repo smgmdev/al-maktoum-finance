@@ -13,7 +13,7 @@ const TermsAndConditions = () => {
           <section className="space-y-4">
             <h2 className="text-xl font-semibold text-gray-900">1. Introduction</h2>
             <p>
-              These Terms and Conditions ("Terms") govern your access to and use of the website and all related services operated by Al Maktoum Finance ("Al Maktoum Finance," "we," "us," or "our").
+              These Terms and Conditions ("Terms") govern your access to and use of the website and all related services operated by AbdulHakim AlMaktoum Kanak Financial Brokerage LLC ("Al Maktoum Finance," "we," "us," or "our").
             </p>
             <p>
               By accessing or using our Website, you agree to be bound by these Terms and our Privacy Policy. If you do not agree with these Terms, do not use the Website.
