@@ -228,7 +228,7 @@ const SpendingInsights = () => {
   }, [slides.length]);
 
   return (
-    <section className="py-20 px-6 bg-white/50">
+    <section className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
