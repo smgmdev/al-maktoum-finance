@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, Settings, Search, Plus, ArrowDown, Info, MoreHorizontal, ShoppingCart, Home, Dumbbell, CreditCard, Send, Repeat } from "lucide-react";
 
 const PhoneMockup1 = () => (
-  <div className="w-64 h-[500px] bg-black rounded-[2.5rem] p-3 shadow-2xl">
+  <div className="w-64 h-[500px] bg-black rounded-[2.5rem] p-3">
     <div className="w-full h-full bg-zinc-900 rounded-[2rem] overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-3">
@@ -72,7 +72,7 @@ const PhoneMockup1 = () => (
 );
 
 const PhoneMockup2 = () => (
-  <div className="w-64 h-[500px] bg-gradient-to-b from-purple-300 to-purple-400 rounded-[2.5rem] p-3 shadow-2xl">
+  <div className="w-64 h-[500px] bg-gradient-to-b from-purple-300 to-purple-400 rounded-[2.5rem] p-3">
     <div className="w-full h-full bg-gradient-to-b from-purple-200/80 to-purple-300/80 rounded-[2rem] overflow-hidden backdrop-blur-sm">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4">
@@ -145,7 +145,7 @@ const PhoneMockup2 = () => (
 );
 
 const PhoneMockup3 = () => (
-  <div className="w-64 h-[500px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-[2.5rem] p-3 shadow-2xl">
+  <div className="w-64 h-[500px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-[2.5rem] p-3">
     <div className="w-full h-full bg-gradient-to-b from-blue-500/90 to-blue-700/90 rounded-[2rem] overflow-hidden backdrop-blur-sm">
       {/* Header */}
       <div className="flex items-center justify-between px-4 py-4">
@@ -228,7 +228,7 @@ const SpendingInsights = () => {
   }, [slides.length]);
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-20 px-6 bg-white/50">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
