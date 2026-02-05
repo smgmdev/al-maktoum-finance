@@ -1,15 +1,54 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import heroImage from "@/assets/dubai-hero.jpg";
 
 const LoginHero = () => {
   const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle signup logic here
-    console.log("Sign up with:", email);
+    
+    if (!email.trim()) return;
+    
+    setIsSubmitting(true);
+    
+    try {
+      const { error } = await supabase
+        .from("email_signups")
+        .insert({ email: email.trim().toLowerCase() });
+      
+      if (error) {
+        if (error.code === "23505") {
+          // Unique constraint violation - email already exists
+          toast({
+            title: "Already registered",
+            description: "This email is already signed up for the Golden Visa campaign.",
+          });
+        } else {
+          throw error;
+        }
+      } else {
+        toast({
+          title: "Success!",
+          description: "You're now entered to win the UAE Golden Visa!",
+        });
+        setEmail("");
+      }
+    } catch (error) {
+      console.error("Error submitting email:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -55,12 +94,14 @@ const LoginHero = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 h-12 bg-white/10 border-white/20 text-white placeholder:text-white/50 rounded-full px-5 focus:bg-white/20 focus:border-white/40"
               required
+              disabled={isSubmitting}
             />
             <Button 
               type="submit"
               className="bg-white hover:bg-white/90 text-black rounded-full px-8 h-12 text-base font-medium whitespace-nowrap"
+              disabled={isSubmitting}
             >
-              Sign up
+              {isSubmitting ? "Signing up..." : "Sign up"}
             </Button>
           </form>
         </div>
