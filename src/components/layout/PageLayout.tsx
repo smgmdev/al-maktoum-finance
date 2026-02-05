@@ -92,7 +92,8 @@ const PageLayout = ({ children }: PageLayoutProps) => {
 
           {/* Copyright & Disclaimers */}
           <div className="space-y-3 text-xs text-gray-400">
-            <p>© Al Maktoum Finance 2026 by AbdulHakim AlMaktoum Kanak Financial Brokerage LLC. Al Maktoum Finance is not a bank. Al Maktoum Finance currently does not provide services to clients.</p>
+            <p>Al Maktoum Finance is not a bank. Al Maktoum Finance currently does not provide services to clients.</p>
+            <p>© Al Maktoum Finance 2026 by AbdulHakim AlMaktoum Kanak Financial Brokerage LLC.</p>
           </div>
         </div>
       </footer>
