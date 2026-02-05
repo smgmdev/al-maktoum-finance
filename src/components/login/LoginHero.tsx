@@ -81,6 +81,14 @@ const LoginHero = () => {
             Sign Up your interest for Al Maktoum Finance Account and get a chance to win UAE Golden Visa for free.
           </p>
           
+          {/* Learn More Link */}
+          <button 
+            onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+            className="text-white/70 hover:text-white underline underline-offset-4 text-base transition-colors"
+          >
+            Learn more
+          </button>
+          
           {/* Sign Up Form */}
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 pt-2 max-w-md">
             <Input
@@ -92,23 +100,13 @@ const LoginHero = () => {
               required
               disabled={isSubmitting}
             />
-            <div className="flex gap-3">
-              <Button 
-                type="submit"
-                className="bg-white hover:bg-white/90 text-black rounded-full px-8 h-12 text-base font-medium whitespace-nowrap"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? "Signing up..." : "Sign up"}
-              </Button>
-              <Button 
-                type="button"
-                variant="outline"
-                className="border-white/30 bg-transparent hover:bg-white/10 text-white rounded-full px-8 h-12 text-base font-medium whitespace-nowrap"
-                onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                Learn more
-              </Button>
-            </div>
+            <Button 
+              type="submit"
+              className="bg-white hover:bg-white/90 text-black rounded-full px-8 h-12 text-base font-medium whitespace-nowrap"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Signing up..." : "Sign up"}
+            </Button>
           </form>
         </div>
       </div>
