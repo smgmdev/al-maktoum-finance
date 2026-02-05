@@ -65,22 +65,21 @@ const Login = () => {
       {/* Hero Section */}
       <LoginHero />
 
-      {/* Features Grid Section */}
-      <FeaturesGrid />
-
-      {/* Access World Video Section */}
-      <AccessWorldSection />
-
       {/* Feature Slider Section */}
       <div className="bg-white">
         <section className="pt-16 pb-4 max-w-6xl mx-auto px-6">
-          <div className="text-center space-y-2 px-6">
-            <p className="text-gray-500 text-sm">Discover more</p>
+          <div className="text-center px-6">
             <h2 className="text-2xl md:text-3xl font-bold text-black">Al Maktoum Business Features</h2>
           </div>
         </section>
         <FeatureSlider />
       </div>
+
+      {/* Features Grid Section */}
+      <FeaturesGrid />
+
+      {/* Access World Video Section */}
+      <AccessWorldSection />
 
       {/* FAQ Section */}
       <FAQSection />
