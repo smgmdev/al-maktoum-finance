@@ -16,35 +16,63 @@ interface BookCallRequest {
   areaOfInterest: string;
 }
 
+interface EmailSignupRequest {
+  email: string;
+}
+
+type RequestBody = (BookCallRequest | EmailSignupRequest) & { type?: "book_call" | "email_signup" };
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
-    const { fullName, email, whatsappNumber, areaOfInterest }: BookCallRequest = await req.json();
+    const body: RequestBody = await req.json();
+    const requestType = body.type || "book_call";
 
-    // Validate required fields
-    if (!fullName || !email || !whatsappNumber || !areaOfInterest) {
-      throw new Error("Missing required fields");
+    let emailResponse;
+
+    if (requestType === "email_signup") {
+      const { email } = body as EmailSignupRequest;
+      
+      if (!email) {
+        throw new Error("Missing email field");
+      }
+
+      emailResponse = await resend.emails.send({
+        from: "Al Maktoum Finance <onboarding@resend.dev>",
+        to: ["adeelamin24@gmail.com"],
+        subject: "New Golden Visa Campaign Signup",
+        html: `
+          <h1>New Email Signup</h1>
+          <p><strong>Email:</strong> ${email}</p>
+          <p>A new user has signed up for the Golden Visa campaign.</p>
+        `,
+      });
+    } else {
+      const { fullName, email, whatsappNumber, areaOfInterest } = body as BookCallRequest;
+
+      if (!fullName || !email || !whatsappNumber || !areaOfInterest) {
+        throw new Error("Missing required fields");
+      }
+
+      emailResponse = await resend.emails.send({
+        from: "Al Maktoum Finance <onboarding@resend.dev>",
+        to: ["adeelamin24@gmail.com"],
+        subject: "New corporate business banking request",
+        html: `
+          <h1>New Corporate Business Banking Request</h1>
+          <p><strong>Full Name:</strong> ${fullName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>WhatsApp Number:</strong> ${whatsappNumber}</p>
+          <p><strong>Area of Interest:</strong></p>
+          <p>${areaOfInterest}</p>
+        `,
+      });
     }
 
-    // Using Resend test domain - change 'to' to your Resend account email
-    const emailResponse = await resend.emails.send({
-      from: "Al Maktoum Finance <onboarding@resend.dev>",
-      to: ["YOUR_RESEND_ACCOUNT_EMAIL@example.com"], // Replace with your email
-      subject: "New corporate business banking request",
-      html: `
-        <h1>New Corporate Business Banking Request</h1>
-        <p><strong>Full Name:</strong> ${fullName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>WhatsApp Number:</strong> ${whatsappNumber}</p>
-        <p><strong>Area of Interest:</strong></p>
-        <p>${areaOfInterest}</p>
-      `,
-    });
-
-    console.log("Book a call email sent successfully:", emailResponse);
+    console.log("Email sent successfully:", emailResponse);
 
     return new Response(JSON.stringify(emailResponse), {
       status: 200,
