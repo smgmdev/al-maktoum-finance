@@ -42,7 +42,7 @@ const handler = async (req: Request): Promise<Response> => {
 
       emailResponse = await resend.emails.send({
         from: "Al Maktoum Finance <onboarding@resend.dev>",
-        to: ["adeelamin24@gmail.com"],
+        to: ["noreply@almaktoumoffice.com"],
         subject: "New Golden Visa Campaign Signup",
         html: `
           <h1>New Email Signup</h1>
@@ -59,7 +59,7 @@ const handler = async (req: Request): Promise<Response> => {
 
       emailResponse = await resend.emails.send({
         from: "Al Maktoum Finance <onboarding@resend.dev>",
-        to: ["adeelamin24@gmail.com"],
+        to: ["noreply@almaktoumoffice.com"],
         subject: "New corporate business banking request",
         html: `
           <h1>New Corporate Business Banking Request</h1>
