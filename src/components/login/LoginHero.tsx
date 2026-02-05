@@ -96,7 +96,7 @@ const LoginHero = () => {
               }}
               className="text-white/70 hover:text-white text-base transition-colors underline"
             >
-              T&C Applies
+              *T&C Applies
             </button>
           </div>
           
