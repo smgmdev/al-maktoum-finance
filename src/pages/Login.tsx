@@ -31,13 +31,6 @@ const Login = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const navLinks = [
-    { label: "Personal", href: "#" },
-    { label: "Business", href: "#" },
-    { label: "Kids & Teens", href: "#" },
-    { label: "Company", href: "#" },
-  ];
-
 
   return (
     <div className="min-h-screen bg-black text-foreground overflow-y-auto">
@@ -49,32 +42,14 @@ const Login = () => {
       >
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Logo & Nav */}
-          <div className="flex items-center gap-8">
-            <Link to="/" className="flex items-center gap-2 text-lg font-semibold text-white tracking-tight">
-              <img src={amfLogo} alt="AMF Logo" className="h-8 w-auto" />
-            </Link>
-            <nav className="hidden md:flex items-center gap-6">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-white/90 hover:text-white text-sm font-medium transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
-          </div>
+          <Link to="/" className="flex items-center">
+            <img src={amfLogo} alt="AMF Logo" className="h-12 w-auto" />
+          </Link>
 
           {/* Right Actions */}
-          <div className="flex items-center gap-4">
-            <a href="#" className="hidden sm:block text-white/90 hover:text-white text-sm font-medium transition-colors">
-              Sign in
-            </a>
-            <Button className="bg-white hover:bg-white/90 text-black rounded-full px-6 h-10 text-sm font-medium">
-              Sign up
-            </Button>
-          </div>
+          <Button className="bg-white hover:bg-white/90 text-black rounded-full px-6 h-10 text-sm font-medium">
+            Sign up
+          </Button>
         </div>
       </header>
 
