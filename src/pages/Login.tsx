@@ -5,6 +5,7 @@ import FeatureSlider from "@/components/login/FeatureSlider";
 import FAQSection from "@/components/login/FAQSection";
 import LoginHero from "@/components/login/LoginHero";
 import FeaturesGrid from "@/components/login/FeaturesGrid";
+import AccessWorldSection from "@/components/login/AccessWorldSection";
 import BookCallDialog from "@/components/login/BookCallDialog";
 import amfLogo from "@/assets/amf-logo.png";
 const Login = () => {
@@ -66,6 +67,9 @@ const Login = () => {
 
       {/* Features Grid Section */}
       <FeaturesGrid />
+
+      {/* Access World Video Section */}
+      <AccessWorldSection />
 
       {/* Feature Slider Section */}
       <div className="bg-white">
