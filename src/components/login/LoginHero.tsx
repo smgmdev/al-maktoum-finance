@@ -57,7 +57,7 @@ const LoginHero = () => {
   };
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-black">
+    <section id="hero" className="relative min-h-screen overflow-hidden bg-black">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
