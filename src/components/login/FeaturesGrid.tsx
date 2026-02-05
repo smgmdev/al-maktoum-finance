@@ -1,50 +1,50 @@
-import { Percent, Globe, Plus, Users, Briefcase, ArrowRight, Wallet, Banknote, TrendingUp } from "lucide-react";
+import { Globe, CreditCard, Building2, Shield, Coins, ArrowLeftRight, Wallet, Users, Landmark } from "lucide-react";
 
 const features = [
   {
-    icon: Percent,
-    title: "Earn up to 4% AER (variable), paid daily",
-    description: "Watch your money grow with competitive rates.",
-  },
-  {
     icon: Globe,
-    title: "Send money abroad at great rates",
-    description: "Transfer money around the world 24/7 in just a few taps.",
+    title: "Borderless Hybrid Banking",
+    description: "Open your banking account in US, Europe, UK, and leading financial capitals from one single app.",
   },
   {
-    icon: Plus,
-    title: "Link all of your accounts",
-    description: "Get a full and secure view of all your money, all in one place.",
+    icon: CreditCard,
+    title: "Al Maktoum Card",
+    description: "Top up your card in less than 20 seconds with any of your assets and use them for your daily purchases worldwide.",
   },
   {
-    icon: Users,
-    title: "Open a Joint account, together",
-    description: "Share finances with a Joint account and try an account for kids.",
+    icon: Building2,
+    title: "Multi-Jurisdiction Accounts",
+    description: "Access banking services across multiple jurisdictions, also available for non-residents.",
   },
   {
-    icon: Briefcase,
-    title: "Simplify freelance finances",
-    description: "Open a Pro account to manage freelance income and earn up to 1% cashback on expenses.",
+    icon: Shield,
+    title: "Institutional-Grade Security",
+    description: "Your assets are protected with end-to-end encryption, multi-signature protocols, and 24/7 monitoring.",
   },
   {
-    icon: ArrowRight,
-    title: "Pay back friends, instantly",
-    description: "Chat, send, and receive money among your Al Maktoum friends.",
+    icon: Coins,
+    title: "Digital Asset Support",
+    description: "Full support for digital assets alongside traditional fiat currencies in one unified platform.",
+  },
+  {
+    icon: ArrowLeftRight,
+    title: "Real-Time Exchange",
+    description: "Competitive real-time exchange rates with full transparency. No hidden fees or spreads.",
   },
   {
     icon: Wallet,
-    title: "Budget with Pockets",
-    description: "Stash cash aside for subscriptions, direct debits, and bills.",
+    title: "Secure Custody",
+    description: "Your assets are held by qualified custodians with the highest standards of protection and regulatory compliance.",
   },
   {
-    icon: Banknote,
-    title: "Hold multiple currencies",
-    description: "Hold and exchange money in 30+ currencies with Al Maktoum exchange rate. No additional fees Monday-Friday.",
+    icon: Users,
+    title: "Business Accounts",
+    description: "Empower your company with cutting-edge solutions like real-time transactions and global treasury management.",
   },
   {
-    icon: TrendingUp,
-    title: "Start investing",
-    description: "Get your money moving and enjoy access to thousands of global company stocks. Capital at risk.",
+    icon: Landmark,
+    title: "Compliant & Regulated",
+    description: "Fully compliant payments and banking solution, seamlessly integrating fiat and digital assets.",
   },
 ];
 
@@ -73,10 +73,6 @@ const FeaturesGrid = () => {
           ))}
         </div>
 
-        {/* Disclaimer */}
-        <p className="text-center text-gray-500 text-xs mt-10 max-w-4xl mx-auto">
-          AER stands for Annual Equivalent Rate and illustrates what the interest rate would be if interest was paid and compounded once each year. The interest rate is variable and subject to your selected plan. Paid plan fees and Instant Access Savings T&Cs apply.
-        </p>
       </div>
     </section>
   );
