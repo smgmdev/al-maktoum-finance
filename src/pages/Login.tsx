@@ -45,14 +45,14 @@ const Login = () => {
           isScrolled ? "bg-zinc-900/80 backdrop-blur-md" : "bg-transparent"
         }`}
       >
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          {/* Logo & Nav */}
+        <div className="max-w-6xl mx-auto flex items-center justify-center relative">
+          {/* Centered Logo */}
           <Link to="/" className="flex items-center">
             <img src={amfLogo} alt="AMF Logo" className="h-12 w-auto" />
           </Link>
 
-          {/* Right Actions */}
-          <Button className="bg-white hover:bg-white/90 text-black rounded-full px-6 h-10 text-sm font-medium">
+          {/* Right Actions - Absolute positioned */}
+          <Button className="absolute right-0 bg-white hover:bg-white/90 text-black rounded-full px-6 h-10 text-sm font-medium">
             Sign up
           </Button>
         </div>
