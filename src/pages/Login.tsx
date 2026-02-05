@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
-import { z } from "zod";
 import { Link } from "react-router-dom";
-import { Plus, ArrowDown, Info, MoreHorizontal, Home, CirclePlus } from "lucide-react";
 import FeatureSlider from "@/components/login/FeatureSlider";
 import FAQSection from "@/components/login/FAQSection";
 import LoginHero from "@/components/login/LoginHero";
@@ -12,11 +8,7 @@ import FeaturesGrid from "@/components/login/FeaturesGrid";
 import SpendingInsights from "@/components/login/SpendingInsights";
 import amfLogo from "@/assets/amf-logo.png";
 
-const emailSchema = z.string().trim().email({ message: "Please enter a valid email address" });
-
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -39,42 +31,51 @@ const Login = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const result = emailSchema.safeParse(email);
-    if (!result.success) {
-      toast({
-        title: "Invalid Email",
-        description: result.error.errors[0].message,
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    
-    toast({
-      title: "Check your email",
-      description: "We've sent you a verification link.",
-    });
-  };
+  const navLinks = [
+    { label: "Personal", href: "#" },
+    { label: "Business", href: "#" },
+    { label: "Kids & Teens", href: "#" },
+    { label: "Company", href: "#" },
+  ];
 
 
   return (
     <div className="min-h-screen bg-black text-foreground overflow-y-auto">
       {/* Header */}
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 px-6 py-3 bg-black/90 backdrop-blur-md border-b border-white/10 transition-transform duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-transform duration-300 ${
           isHeaderVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <Link to="/" className="flex items-center gap-2 text-base font-semibold text-white tracking-tight">
-          <img src={amfLogo} alt="AMF Logo" className="h-10 w-auto" />
-          Al Maktoum Finance
-        </Link>
+        <div className="max-w-7xl mx-auto flex items-center justify-between">
+          {/* Logo & Nav */}
+          <div className="flex items-center gap-8">
+            <Link to="/" className="flex items-center gap-2 text-lg font-semibold text-white tracking-tight">
+              <img src={amfLogo} alt="AMF Logo" className="h-8 w-auto" />
+            </Link>
+            <nav className="hidden md:flex items-center gap-6">
+              {navLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-white/90 hover:text-white text-sm font-medium transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          {/* Right Actions */}
+          <div className="flex items-center gap-4">
+            <a href="#" className="hidden sm:block text-white/90 hover:text-white text-sm font-medium transition-colors">
+              Sign in
+            </a>
+            <Button className="bg-white hover:bg-white/90 text-black rounded-full px-6 h-10 text-sm font-medium">
+              Sign up
+            </Button>
+          </div>
+        </div>
       </header>
 
       {/* Hero Section */}
