@@ -101,11 +101,8 @@ const Login = () => {
               <span>🇦🇪</span>
               United Arab Emirates
             </button>
-            <Link to="#" className="text-gray-500 hover:text-gray-900 transition-colors">Website Terms</Link>
-            <Link to="#" className="text-gray-500 hover:text-gray-900 transition-colors">Legal Agreements</Link>
-            <Link to="#" className="text-gray-500 hover:text-gray-900 transition-colors">Complaints</Link>
-            <Link to="#" className="text-gray-500 hover:text-gray-900 transition-colors">Privacy</Link>
-            <Link to="#" className="text-gray-500 hover:text-gray-900 transition-colors">Customer Vulnerability</Link>
+            <Link to="/privacy-policy" className="text-gray-500 hover:text-gray-900 transition-colors">Privacy Policy</Link>
+            <Link to="/terms-and-conditions" className="text-gray-500 hover:text-gray-900 transition-colors">Terms and Conditions</Link>
           </div>
 
           {/* Copyright & Disclaimers */}
