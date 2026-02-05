@@ -27,12 +27,12 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="py-16 px-6">
+    <section className="py-16 px-6 bg-white">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <p className="text-muted-foreground mb-3">Have questions?</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <p className="text-gray-500 mb-3">Have questions?</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-black">
             Al Maktoum Business FAQs
           </h2>
         </div>
@@ -43,12 +43,12 @@ const FAQSection = () => {
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border-b border-white/10 py-2"
+              className="border-b border-gray-200 py-2"
             >
-              <AccordionTrigger className="text-left text-lg font-medium text-white hover:no-underline py-4">
+              <AccordionTrigger className="text-left text-lg font-medium text-black hover:no-underline py-4">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-4">
+              <AccordionContent className="text-gray-600 pb-4">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -56,10 +56,10 @@ const FAQSection = () => {
         </Accordion>
 
         {/* Disclaimer */}
-        <div className="mt-16 space-y-4 text-sm text-muted-foreground">
+        <div className="mt-16 space-y-4 text-sm text-gray-500">
           <p>
             Fees and{" "}
-            <Link to="#" className="underline hover:text-white transition-colors">
+            <Link to="#" className="underline hover:text-black transition-colors">
               T&Cs apply
             </Link>
             . Currency exchange at the interbank rate is subject to your plan's allowance.
