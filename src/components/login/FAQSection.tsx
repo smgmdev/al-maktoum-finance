@@ -70,20 +70,6 @@ const FAQSection = () => {
             </AccordionItem>
           ))}
         </Accordion>
-
-        {/* Disclaimer */}
-        <div className="mt-16 space-y-4 text-sm text-gray-500">
-          <p>
-            Fees and{" "}
-            <Link to="#" className="underline hover:text-black transition-colors">
-              T&Cs apply
-            </Link>
-            . Currency exchange at the interbank rate is subject to your plan's allowance.
-          </p>
-          <p>
-            ¹Based on the average reduction in spending volume for Al Maktoum Business customers when using our spend control features in the first 3 months of 2024. This percentage is illustrative of savings that could be achieved, but is not guaranteed.
-          </p>
-        </div>
       </div>
     </section>
   );
