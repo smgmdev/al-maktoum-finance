@@ -154,7 +154,7 @@ const FeatureSlider = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex-none w-[280px] md:w-[320px] bg-gradient-to-b ${feature.gradient} rounded-3xl p-6 transition-opacity duration-300 ${
+              className={`flex-none w-[280px] md:w-[320px] bg-[#1a1a1a] rounded-3xl p-6 transition-opacity duration-300 ${
                 selectedIndex === index ? "opacity-100" : "opacity-60"
               }`}
             >
