@@ -77,7 +77,7 @@ const LoginHero = () => {
           
           {/* Description */}
           <p className="text-lg md:text-xl text-white/80 max-w-md leading-relaxed">
-            Sign up your interest for Al Maktoum Finance account and get a chance to win UAE golden visa for free.
+            Sign Up your interest for Al Maktoum Finance Account and get a chance to win UAE Golden Visa for free.
           </p>
           
           {/* Sign Up Form */}
