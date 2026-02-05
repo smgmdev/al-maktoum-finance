@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { ArrowDown } from "lucide-react";
 import heroImage from "@/assets/dubai-frame-hero.webp";
 
 const LoginHero = () => {
@@ -84,9 +85,10 @@ const LoginHero = () => {
           {/* Learn More Link */}
           <button 
             onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-            className="text-white/70 hover:text-white underline underline-offset-4 text-base transition-colors"
+            className="flex items-center gap-2 text-white/70 hover:text-white underline underline-offset-4 text-base transition-colors"
           >
             Learn more
+            <ArrowDown className="w-4 h-4" />
           </button>
           
           {/* Sign Up Form */}
