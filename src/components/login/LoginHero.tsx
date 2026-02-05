@@ -65,24 +65,14 @@ const LoginHero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-24 md:pt-40 md:pb-32 flex flex-col justify-center min-h-screen">
         <div className="max-w-xl space-y-6">
-          {/* Subtitle */}
-          <p className="text-white/70 text-lg">
-            Accept payments
-          </p>
-          
           {/* Main Heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1]">
-            Sign up and win UAE golden visa
+            Sign Up and Win UAE Golden Visa
           </h1>
           
           {/* Description */}
           <p className="text-lg md:text-xl text-white/80 max-w-md leading-relaxed">
             Sign up your interest for Al Maktoum Finance account and get a chance to win UAE golden visa for free.
-          </p>
-          
-          {/* Terms Link */}
-          <p className="text-white/80">
-            <a href="#" className="underline hover:text-white transition-colors">Fees and T&Cs</a> apply.
           </p>
           
           {/* Sign Up Form */}
