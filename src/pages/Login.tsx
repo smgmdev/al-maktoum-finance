@@ -40,7 +40,7 @@ const Login = () => {
     <div className="min-h-screen bg-black text-foreground overflow-y-auto">
       {/* Header */}
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 px-6 py-2 transition-all duration-300 ${
           isHeaderVisible ? "translate-y-0" : "-translate-y-full"
         } ${
           isScrolled ? "bg-zinc-900/80 backdrop-blur-md" : "bg-transparent"
