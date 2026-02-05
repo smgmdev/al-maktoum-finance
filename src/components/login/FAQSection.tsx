@@ -61,17 +61,17 @@ const FAQSection = () => {
         <div className="text-center mb-12">
           <p className="text-gray-500 mb-3">Have questions?</p>
           <h2 className="text-3xl md:text-4xl font-bold text-black">
-            Al Maktoum Business FAQs
+            Al Maktoum Finance FAQs
           </h2>
         </div>
 
         {/* Accordion */}
-        <Accordion type="single" collapsible className="space-y-2">
+        <Accordion type="single" collapsible className="space-y-0">
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="border-b border-gray-200 py-2"
+              className="border-b border-gray-200 py-0"
             >
               <AccordionTrigger className="text-left text-lg font-medium text-black hover:no-underline py-4">
                 {faq.question}
