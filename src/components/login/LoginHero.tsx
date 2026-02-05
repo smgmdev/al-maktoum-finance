@@ -78,18 +78,20 @@ const LoginHero = () => {
           </h1>
           
           {/* Description */}
-          <p className="text-lg md:text-xl text-white/80 max-w-md leading-relaxed">
-            Sign Up your interest for Al Maktoum Finance Account and get a chance to win UAE Golden Visa for free.
-          </p>
-          
-          {/* Learn More Link */}
-          <button 
-            onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
-            className="flex items-center gap-2 text-white/70 hover:text-white underline underline-offset-4 text-base transition-colors"
-          >
-            Learn more
-            <ArrowDown className="w-4 h-4" />
-          </button>
+          <div className="space-y-2">
+            <p className="text-lg md:text-xl text-white/80 max-w-md leading-relaxed">
+              Sign Up your interest for Al Maktoum Finance Account and get a chance to win UAE Golden Visa for free.
+            </p>
+            
+            {/* Learn More Link */}
+            <button 
+              onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
+              className="flex items-center gap-2 text-white/70 hover:text-white text-base transition-colors"
+            >
+              Learn more
+              <ArrowDown className="w-4 h-4" />
+            </button>
+          </div>
           
           {/* Sign Up Form */}
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 pt-2 max-w-md">
