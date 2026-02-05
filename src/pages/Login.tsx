@@ -6,6 +6,7 @@ import FAQSection from "@/components/login/FAQSection";
 import LoginHero from "@/components/login/LoginHero";
 import FeaturesGrid from "@/components/login/FeaturesGrid";
 import amfLogo from "@/assets/amf-logo.png";
+import amfLogoBlack from "@/assets/amf-logo-black.png";
 
 const Login = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -84,7 +85,7 @@ const Login = () => {
           {/* Top Row - Logo & Social */}
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2 text-sm font-semibold text-gray-900">
-              <img src={amfLogo} alt="AMF Logo" className="h-5 w-auto" />
+              <img src={amfLogoBlack} alt="AMF Logo" className="h-6 w-auto" />
               Al Maktoum Finance
             </Link>
             <div className="flex items-center gap-3">
