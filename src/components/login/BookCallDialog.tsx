@@ -7,7 +7,11 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
-const BookCallDialog = () => {
+interface BookCallDialogProps {
+  trigger?: React.ReactNode;
+}
+
+const BookCallDialog = ({ trigger }: BookCallDialogProps) => {
   const [open, setOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -76,12 +80,14 @@ const BookCallDialog = () => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button 
-          variant="outline" 
-          className="bg-transparent border-white text-white hover:bg-white hover:text-black rounded-full px-8 h-12 text-sm font-medium transition-all"
-        >
-          Book a call
-        </Button>
+        {trigger || (
+          <Button 
+            variant="outline" 
+            className="bg-transparent border-white text-white hover:bg-white hover:text-black rounded-full px-8 h-12 text-sm font-medium transition-all"
+          >
+            Book a call
+          </Button>
+        )}
       </DialogTrigger>
       <DialogContent className="sm:max-w-md bg-white">
         <DialogHeader>
