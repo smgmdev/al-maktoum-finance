@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://almaktoum-vault-launch.lovable.app/sitemap.xml
